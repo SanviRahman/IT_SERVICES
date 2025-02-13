@@ -527,6 +527,267 @@
             margin-right: 80px;
             gap: 40px;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Existing CSS remains the same until the media queries section */
+
+        /* Media Queries for Responsive Design */
+
+        /* Computer View (Default styles are already set for computer view) */
+
+        /* Tablet View */
+        @media (max-width: 1024px) {
+            nav {
+                padding: 0 50px;
+            }
+
+            .section {
+                height: 400px;
+            }
+
+            .content2 {
+                margin-left: 800px;
+            }
+
+            .section2 {
+                gap: 100px;
+            }
+
+            .content3 {
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+
+            .content4 {
+                margin-right: 200px;
+            }
+
+            .section5 {
+                margin-left: 100px;
+            }
+
+            .section6 {
+                margin-left: 60px;
+            }
+
+            .section7 {
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+
+            .section8 {
+                margin-left: 60px;
+            }
+
+            .section9 {
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+
+            .footersection2 {
+                margin-left: 200px;
+                gap: 100px;
+            }
+        }
+
+        /* Phone View */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            .menu-icon,
+            .cancel-icon,
+            .search-icon {
+                margin: 0 10px;
+            }
+
+            .section {
+                height: 300px;
+            }
+
+            .content2 {
+                margin-left: 400px;
+            }
+
+            .section2 {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .content3 {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .content4 {
+                margin-right: 100px;
+            }
+
+            .section3 {
+                flex-direction: column;
+                height: auto;
+                padding: 30px;
+            }
+
+            .section4 {
+                height: auto;
+                padding: 30px;
+            }
+
+            .section5 {
+                flex-direction: column;
+                margin-left: 20px;
+                gap: 20px;
+            }
+
+            .section6 {
+                margin-left: 20px;
+            }
+
+            .section7 {
+                flex-direction: column;
+                margin-left: 20px;
+                margin-right: 20px;
+                height: auto;
+            }
+
+            .section8 {
+                margin-left: 20px;
+                height: auto;
+            }
+
+            .section9 {
+                flex-direction: column;
+                margin-left: 20px;
+                margin-right: 20px;
+                height: auto;
+            }
+
+            .footersection2 {
+                flex-direction: column;
+                margin-left: 20px;
+                gap: 20px;
+            }
+
+            .footersection3 {
+                flex-direction: column;
+                margin-left: 20px;
+                gap: 20px;
+            }
+
+            .section6 .slider,
+            .section8 .slider {
+                flex-direction: column;
+            }
+
+            .section6 .slide,
+            .section8 .slide {
+                min-width: 100%;
+            }
+
+            .section6 .prev,
+            .section6 .next,
+            .section8 .prev,
+            .section8 .next {
+                display: none;
+            }
+        }
+
+        /* Small Phone View */
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 10px;
+            }
+
+            .menu-icon,
+            .cancel-icon,
+            .search-icon {
+                margin: 0 5px;
+            }
+
+            .section {
+                height: 250px;
+            }
+
+            .content2 {
+                margin-left: 200px;
+            }
+
+            .section2 {
+                gap: 20px;
+            }
+
+            .content3 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .content4 {
+                margin-right: 50px;
+            }
+
+            .section3 {
+                padding: 20px;
+            }
+
+            .section4 {
+                padding: 20px;
+            }
+
+            .section5 {
+                margin-left: 10px;
+            }
+
+            .section6 {
+                margin-left: 10px;
+            }
+
+            .section7 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .section8 {
+                margin-left: 10px;
+            }
+
+            .section9 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .footersection2 {
+                margin-left: 10px;
+            }
+
+            .section6 .slider,
+            .section8 .slider {
+                flex-direction: column;
+            }
+
+            .section6 .slide,
+            .section8 .slide {
+                min-width: 100%;
+            }
+
+            .section6 .prev,
+            .section6 .next,
+            .section8 .prev,
+            .section8 .next {
+                display: none;
+            }
+        }
     </style>
 
 
@@ -708,16 +969,16 @@
     <h1 style="color: #e63600; text-align: center; margin-top: 130px;"> Our Key Feature</h1>
     <section class="section6" style="overflow: hidden; position: relative; margin-top: 70px;">
         <div class="slider">
-            
+
             {% for index in form %}
             <div class="slide">
                 <img src="{{ index.image.url }}" alt="">
                 <h1 style="color: red; padding: 8px;">{{ index.title }}</h1>
                 <p style="padding: 6px;">{{ index.sub_title }}</p>
-                 <!-- <h1 style="color: red; padding: 8px;">24/7 Support and Maintanance</h1>
+                <!-- <h1 style="color: red; padding: 8px;">24/7 Support and Maintanance</h1>
                 <p style="padding: 6px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-             </div> 
-             {% endfor %}
+            </div>
+            {% endfor %}
             <!-- <div class="slide">
                 <img src="https://th.bing.com/th/id/OIP.WEKMZBVS3dCZ3PT9NU9UKAHaE3?rs=1&pid=ImgDetMain" alt="">
                 <h1 style="color: red; padding: 8px;">Innovation Tech Solutions</h1>
@@ -743,7 +1004,7 @@
                 <h1 style="color: red; padding: 8px;">Innovation Focus</h1>
                 <p style="padding: 6px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div> -->
-        </div> 
+        </div>
         <!-- Slider Navigation Buttons -->
         <button class="prev"
             style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10094;</button>

@@ -357,6 +357,144 @@
             background-color: navy;
             cursor: pointer;
         }
+
+
+
+
+
+
+
+
+
+        /* Existing CSS remains the same until the media queries section */
+
+        /* Media Queries for Responsive Design */
+
+        /* Computer View (Default styles are already set for computer view) */
+
+        /* Tablet View */
+        @media (max-width: 1024px) {
+            nav {
+                padding: 0 50px;
+            }
+
+            .section {
+                height: 400px;
+            }
+
+            .section2 {
+                margin-left: 400px;
+            }
+
+            .section3 {
+                margin-left: 400px;
+            }
+
+            .section2 h1,
+            .section3 h1 {
+                font-size: 24px;
+            }
+
+            .section2 p,
+            .section3 p {
+                font-size: 14px;
+            }
+
+            .footersection2 {
+                margin-left: 200px;
+                gap: 100px;
+            }
+        }
+
+        /* Phone View */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            .menu-icon,
+            .cancel-icon,
+            .search-icon {
+                margin: 0 10px;
+            }
+
+            .section {
+                height: 300px;
+            }
+
+            .section2 {
+                margin-left: 20px;
+            }
+
+            .section3 {
+                margin-left: 20px;
+            }
+
+            .section2 h1,
+            .section3 h1 {
+                font-size: 20px;
+            }
+
+            .section2 p,
+            .section3 p {
+                font-size: 12px;
+            }
+
+            .footersection2 {
+                flex-direction: column;
+                margin-left: 20px;
+                gap: 20px;
+            }
+
+            .footersection3 {
+                flex-direction: column;
+                margin-left: 20px;
+                gap: 20px;
+            }
+        }
+
+        /* Small Phone View */
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 10px;
+            }
+
+            .menu-icon,
+            .cancel-icon,
+            .search-icon {
+                margin: 0 5px;
+            }
+
+            .section {
+                height: 250px;
+            }
+
+            .section2 {
+                margin-left: 10px;
+            }
+
+            .section3 {
+                margin-left: 10px;
+            }
+
+            .section2 h1,
+            .section3 h1 {
+                font-size: 18px;
+            }
+
+            .section2 p,
+            .section3 p {
+                font-size: 10px;
+            }
+
+            .footersection2 {
+                margin-left: 10px;
+            }
+
+            .footersection3 {
+                margin-left: 10px;
+            }
+        }
     </style>
 
     <!-- nav -->
