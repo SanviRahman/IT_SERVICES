@@ -16,7 +16,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 
-        /* General Styles */
         * {
             margin: 0;
             padding: 0;
@@ -26,9 +25,11 @@
         }
 
         body {
+            /* background: #f2f2f2; */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+
         }
 
         nav {
@@ -39,6 +40,7 @@
             justify-content: space-between;
             height: 70px;
             padding: 0 100px;
+
         }
 
         nav .logo {
@@ -124,6 +126,110 @@
             display: none;
         }
 
+        @media (max-width: 1245px) {
+            nav {
+                padding: 0 50px;
+            }
+        }
+
+        @media (max-width: 1140px) {
+            nav {
+                padding: 0px;
+            }
+
+            nav .logo {
+                flex: 2;
+                text-align: center;
+            }
+
+            nav .nav-items {
+                position: fixed;
+                z-index: 99;
+                top: 70px;
+                width: 100%;
+                left: -100%;
+                height: 100%;
+                padding: 10px 50px 0 50px;
+                text-align: center;
+                background: #14181f;
+                display: inline-block;
+                transition: left 0.3s ease;
+            }
+
+            nav .nav-items.active {
+                left: 0px;
+            }
+
+            nav .nav-items li {
+                line-height: 40px;
+                margin: 30px 0;
+            }
+
+            nav .nav-items li a {
+                font-size: 20px;
+            }
+
+            nav form {
+                position: absolute;
+                top: 80px;
+                right: 50px;
+                opacity: 0;
+                pointer-events: none;
+                transition: top 0.3s ease, opacity 0.1s ease;
+            }
+
+            nav form.active {
+                top: 95px;
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            nav form:before {
+                position: absolute;
+                content: "";
+                top: -13px;
+                right: 0px;
+                width: 0;
+                height: 0;
+                z-index: -1;
+                border: 10px solid transparent;
+                border-bottom-color: #1e232b;
+                margin: -20px 0 0;
+            }
+
+            nav form:after {
+                position: absolute;
+                content: '';
+                height: 60px;
+                padding: 2px;
+                background: #1e232b;
+                border-radius: 2px;
+                min-width: calc(100% + 20px);
+                z-index: -2;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            nav .menu-icon {
+                display: block;
+            }
+
+            nav .search-icon,
+            nav .menu-icon span {
+                display: block;
+            }
+
+            nav .menu-icon span.hide,
+            nav .search-icon.hide {
+                display: none;
+            }
+
+            nav .cancel-icon.show {
+                display: block;
+            }
+        }
+
         .content {
             position: absolute;
             top: 50%;
@@ -151,7 +257,56 @@
             padding: 0 5px 0 0;
         }
 
-        /* Section Styles */
+        @media (max-width: 980px) {
+
+            nav .menu-icon,
+            nav .cancel-icon,
+            nav .search-icon {
+                margin: 0 20px;
+            }
+
+            nav form {
+                right: 30px;
+            }
+        }
+
+        @media (max-width: 350px) {
+
+            nav .menu-icon,
+            nav .cancel-icon,
+            nav .search-icon {
+                margin: 0 10px;
+                font-size: 16px;
+            }
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content header {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .content .text {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .content .space {
+            margin: 10px 0;
+        }
+
+
+
+        /* <----------------------------- Section -------------------------> */
+
+
+        /* Section 1 */
         .section {
             background-image: url('https://th.bing.com/th/id/R.cf2922b9c74a11dd76146e2171397e59?rik=DraFhPTppE48LQ&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2016%2f01%2fblack-wallpaper-3.jpg&ehk=By%2fOyu69UBtmC8dDgg6mIgYH0qZeo7Fhtj%2bmQnue9pM%3d&risl=&pid=ImgRaw&r=0');
             height: 450px;
@@ -159,86 +314,95 @@
             text-align: center;
         }
 
+
+
+
+        /* section 2 */
         .section2 {
-            height: auto;
+            height: 860px;
             width: 100%;
             margin-top: 80px;
         }
 
         .div1 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 100px;
+            gap: 120px;
             margin-top: 80px;
-            margin-left: 20px;
-            justify-content: center;
+            margin-left: 140px;
+            height: 350px;
         }
 
         .div2 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 100px;
+            gap: 60px;
             margin-top: 80px;
-            margin-left: 20px;
-            justify-content: center;
+            margin-left: 270px;
+            height: 350px;
         }
 
+
+
+        /* sction 3 */
         .section3 {
-            height: auto;
+            height: 600px;
             width: 90%;
-            margin-top: 100px;
         }
 
         .div3 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            gap: 50px;
+            margin-left: 400px;
             margin-top: 30px;
-            justify-content: center;
+
+
         }
 
+        /* section 4 */
         .section4 {
             background-image: url('https://th.bing.com/th/id/OIP.m096lDro6ncKKg4DwPmUUwHaEo?rs=1&pid=ImgDetMain');
             height: 450px;
-            width: 90%;
-            margin-top: 100px;
+            width: 85%;
+            margin-left: 185px;
             border-radius: 20px;
         }
 
         .div4 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            gap: 80px;
+
         }
 
-        /* Footer Styles */
+
+        /* footer section */
         footer {
             background-color: #14181f;
-            height: auto;
+            height: 500px;
             width: 100%;
             margin-top: 60px;
-            padding: 20px;
+            /* margin-left: 100px; */
+            margin-right: 80px;
+            gap: 80px;
         }
 
         .footersection2 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             margin-top: 60px;
-            justify-content: center;
+            margin-left: 400px;
+            margin-right: 80px;
+            gap: 180px;
         }
 
         .footersection3 {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             margin-top: 60px;
-            justify-content: center;
+            margin-left: 400px;
+            margin-right: 80px;
+            gap: 40px;
         }
 
         button {
             background-color: red;
+            /* Green */
             border: none;
             color: white;
             padding: 15px 32px;
@@ -252,89 +416,6 @@
         button:hover {
             background-color: navy;
             cursor: pointer;
-        }
-
-        /* Media Queries for Responsiveness */
-
-        /* Tablet View (768px - 1024px) */
-        @media (max-width: 1024px) {
-            nav {
-                padding: 0 20px;
-            }
-
-            .section {
-                height: 350px;
-            }
-
-            .section2 {
-                margin-top: 40px;
-            }
-
-            .div1,
-            .div2 {
-                gap: 10px;
-                margin-left: 10px;
-            }
-
-            .section4 {
-                height: 350px;
-            }
-
-            .footersection2,
-            .footersection3 {
-                gap: 10px;
-            }
-        }
-
-        /* Mobile View (up to 767px) */
-        @media (max-width: 767px) {
-            nav {
-                padding: 0 10px;
-            }
-
-            nav .logo {
-                font-size: 24px;
-            }
-
-            .section {
-                height: 250px;
-            }
-
-            .section h1 {
-                font-size: 24px;
-            }
-
-            .section p {
-                font-size: 14px;
-            }
-
-            .section2 {
-                margin-top: 20px;
-            }
-
-            .div1,
-            .div2 {
-                gap: 5px;
-                margin-left: 5px;
-            }
-
-            .section3 {
-                width: 100%;
-            }
-
-            .section4 {
-                height: 250px;
-            }
-
-            .footersection2,
-            .footersection3 {
-                gap: 5px;
-            }
-
-            button {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
         }
     </style>
 
@@ -387,7 +468,7 @@
     <h1 style="color: #ff3d00;margin-left: 290px;padding: 8px;">Providing Competed Provational IT Service</h1>
     <section class="section2">
         <div class="div1" style="flex-wrap:wrap;justify-content: center;">
-
+            
             {% for index in form %}
             <div style="border: 1px solid rgb(99, 98, 98); padding: 12px; border-radius: 12px;">
                 <img src=" {{ index.image.url }}" alt="" height="160px" width="100%"
@@ -401,7 +482,7 @@
                 </button>
                 </a>
             </div>
-            {% endfor %}
+           {% endfor %}
             <!-- <div style="border: 1px solid rgb(99, 98, 98); padding: 25px;">
                 <img src="https://th.bing.com/th/id/R.938203be16ee7f4ae02e43119a5de170?rik=xMBp2BV6FEvY3w&pid=ImgRaw&r=0"
                     alt="" height="150px" width="100%"
